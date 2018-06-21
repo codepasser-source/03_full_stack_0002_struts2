@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+
+	<!--struts2.0 begin -->
+	<package name="default" extends="struts-default" namespace="/">
+		<default-action-ref name="default"></default-action-ref>
+		<!-- <action name="default"> <result>default.jsp</result> </action> -->
+
+		<action name="default" class="com.mattdamon.action.DefaultAction"
+			method="entrance">
+			<result name="success">
+				/default.jsp
+			</result>
+		</action>
+	</package>
+	<!--struts2.0 begin -->
+
+</struts>

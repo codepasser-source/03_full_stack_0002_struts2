@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+ 
+    <!--struts2.0 begin-->
+	<package name="com/baishui/user" extends="struts-default" namespace="/com/baishui/user">
+
+		<action name="login" class="com.baishui.user.action.LoginAction"> 
+			<result name="success">/com/baishui/user/login_success.jsp</result> 
+			<result name="input">/com/baishui/user/error.jsp</result>
+		</action>
+		
+		
+      
+	</package>
+	 <!--struts2.0 begin-->
+ 
+</struts>

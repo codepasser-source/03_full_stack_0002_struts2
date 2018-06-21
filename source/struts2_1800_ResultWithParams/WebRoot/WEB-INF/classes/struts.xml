@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+ 
+    <!--struts2.0 begin--> 
+    <package name="default" extends="struts-default" namespace="/">
+    <default-action-ref name="default"></default-action-ref> 
+      <action name="default">
+        <result>
+             /indexMain.jsp
+        </result>
+      </action>  
+    </package>
+	<package name="user" namespace="/user" extends="struts-default"> 
+	    <action name="user" class="com.baishui.action.UserAction">
+	    	<result  type="redirect">/user/user_success.jsp?t=${type}</result>
+	    </action>	  
+    </package>
+	 <!--struts2.0 end-->
+ 
+</struts>

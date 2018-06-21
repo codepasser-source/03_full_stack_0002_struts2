@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+ 
+    <!--struts2.1 begin-->
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <!--  <constant name="struts.devMode" value="true" /> --> 
+    <!-- 2.1中配置允许访问静态方法allowStaticMethodAccess（2.0中不用配置默认为 true） -->
+    <!-- 2.1struts.xml 默认设置 文档 struts2-core-2.1.6.jar-org.apache.struts2-static default.properties-->
+    <constant name="struts.ognl.allowStaticMethodAccess" value="true"></constant>
+	
+    <package name="default" extends="struts-default">
+       <global-results>
+            <result name="exception">/exce.jsp</result>      
+       </global-results>
+      <global-exception-mappings>
+           <exception-mapping result="exception" exception="java.lang.Exception"></exception-mapping>
+      </global-exception-mappings> 
+    </package>
+    <package name="exce" extends="default" namespace="/exce">
+     
+     <action name="exce" class="com.baishui.struts2.exception.MyException"> 
+       <result>/success.jsp</result>
+     </action>
+    
+    </package>
+ 
+</struts>

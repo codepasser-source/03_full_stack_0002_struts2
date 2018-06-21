@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+    <constant name="devMode" value="true"></constant>
+    <!--struts2.0 begin-->
+	<package name="struts2" extends="struts-default" namespace="/"> 
+	<default-action-ref name="index"> 
+	</default-action-ref> 
+		<action name="index"> 
+			<result>/index.jsp</result> 
+		</action>  
+	</package>
+	
+	<package name="admin" extends="struts-default" namespace="/admin">
+	    <action name="*_*" class="com.baishui.bbs.action.{1}Action" method="{2}">
+		  <result name="success">/{1}_{2}.jsp</result>
+		</action> 
+		
+		<!--第二种配置方法，取决于设计，这种清晰但配置复杂
+		<action name="Category" class="com.baishui.bbs.CategoryAction">
+		  <result name="success">/Category_list.jsp</result>
+		   <result name="update">/Category_update.jsp</result>
+		    <result name="delete">/Category_delete.jsp</result> 
+		     <result name="add">/Category_add.jsp</result>
+		</action> 
+	    -->
+	</package>
+	
+	 
+</struts>

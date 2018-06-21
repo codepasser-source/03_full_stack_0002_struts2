@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+ 
+    <!--struts2.0 begin-->
+	<package name="user" extends="struts-default" namespace="/">
+
+		<action name="login1" class="com.baishui.user.action.LoginAction1"> 
+			<result name="success">/login_success.jsp</result>
+			 <result name="fail">/login_fail.jsp</result>
+		</action>
+		
+		<action name="login2" class="com.baishui.user.action.LoginAction2"> 
+			<result name="success">/login_success.jsp</result>
+			 <result name="fail">/login_fail.jsp</result>
+		</action>
+		<action name="login3" class="com.baishui.user.action.LoginAction3"> 
+			<result name="success">/login_success.jsp</result>
+			 <result name="fail">/login_fail.jsp</result>
+		</action>
+		
+		<action name="login4" class="com.baishui.user.action.LoginAction4"> 
+			<result name="success">/login_success.jsp</result>
+			 <result name="fail">/login_fail.jsp</result>
+		</action>
+		 
+	</package>
+	 <!--struts2.0 begin-->
+ 
+</struts>
